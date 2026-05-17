@@ -1,0 +1,8 @@
+{
+  "installCommand": "if [ -d \"flutter\" ]; then echo \"Flutter exists\"; else git clone https://github.com/flutter/flutter.git -b stable; fi",
+  "buildCommand": "cd seil && ../flutter/bin/flutter build web --no-tree-shake-icons",
+  "outputDirectory": "seil/build/web",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
